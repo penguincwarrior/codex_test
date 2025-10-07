@@ -1,5 +1,6 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
 import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js";
+import { BoxLineGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/BoxLineGeometry.js";
 
 const canvas = document.getElementById("scene");
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
@@ -36,7 +37,7 @@ const offset = (boardSize - 1) / 2;
 const baseStep = 320;
 
 const frameGroup = new THREE.LineSegments(
-  new THREE.BoxLineGeometry(
+  new BoxLineGeometry(
     boardSize * cellSize,
     boardSize * cellSize,
     boardSize * cellSize,
@@ -222,6 +223,8 @@ function handleKeyDown(event) {
     arrowright: { x: 1, y: 0, z: 0 },
     arrowup: { x: 0, y: 0, z: -1 },
     arrowdown: { x: 0, y: 0, z: 1 },
+    a: { x: -1, y: 0, z: 0 },
+    d: { x: 1, y: 0, z: 0 },
     w: { x: 0, y: 1, z: 0 },
     s: { x: 0, y: -1, z: 0 },
   };
