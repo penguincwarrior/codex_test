@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D 贪吃蛇</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="overlay">
+        <h1>3D 贪吃蛇</h1>
+        <div class="status">
+          <div>得分：<span id="score">0</span></div>
+          <div>长度：<span id="length">3</span></div>
+          <div>速度：<span id="speed">1x</span></div>
+        </div>
+        <div class="instructions">
+          <p>方向键控制水平移动，W / S 控制上下浮动。</p>
+          <p>按空格暂停或继续，按 R 重新开始。</p>
+        </div>
+        <div id="message" class="message"></div>
+      </section>
+      <canvas id="scene"></canvas>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
